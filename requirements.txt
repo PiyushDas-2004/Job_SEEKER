@@ -1,0 +1,11 @@
+# Core dependencies for job_agent.py
+anthropic>=1.2.0        # Claude API SDK (query parsing + ranking)
+aiohttp>=3.9            # concurrent async HTTP for the job-board APIs
+
+# Used only by probe_apis.py, the schema-inspection script
+requests>=2.31
+
+# Optional but recommended on corporate networks: verifies TLS against the OS
+# certificate store, so a TLS-inspecting proxy's private root CA is trusted.
+# Without it such networks fail every HTTPS call with CERTIFICATE_VERIFY_FAILED.
+truststore>=0.9
